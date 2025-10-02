@@ -102,20 +102,34 @@ const animations = () => {
     avec un easing elastic.out
     et répéter ce mouvement à l'infini
    ----------------------- */
-    const po = gsap.timeline({ repeat });
+    const po = gsap.timeline({ repeat: Infinity });
 
     po.to("#js-exercise-7", {
-      y: "100px",
-      duration: 3,
-      scale: 0.75,
-      duration: 5,
+      rotation: 135,
+      duration: 2,
+      ease: "elastic.out",
     });
+
     /* -----------------------
     Exercice 8
    -----------------------
     Réaliser une animation libre
     lorsque le bouton est cliqué
    ----------------------- */
+    const bhaa = document.querySelector("#js-exercise-8 .button");
+    const ha = document.querySelector("#js-exercise-8");
+
+    bhaa.addEventListener("click", function () {
+      ha.classList.toggle("aah");
+    });
+
+    const aah = gsap.timeline({ repeat: Infinity });
+
+    aah.to("#js-exercise-8", {
+      rotation: 360,
+      duration: 3,
+      duration: 5,
+    });
   }
 };
 
