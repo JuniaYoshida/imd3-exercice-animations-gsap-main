@@ -123,7 +123,7 @@ const animations = () => {
       ha.classList.toggle("aah");
     });
 
-    const aah = gsap.timeline({ repeat: Infinity });
+    const aah = gsap.timeline();
 
     aah.to("#js-exercise-8", {
       rotation: 360,

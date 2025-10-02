@@ -1,3 +1,4 @@
+import { gsap } from "gsap";
 const timelineExercices = () => {
   if (document.querySelector("#exercice-timeline")) {
     /* -----------------------
@@ -8,6 +9,10 @@ const timelineExercices = () => {
     2. Rotation de 180° (0.8s)
     3. Retour à la position et rotation d'origine (1.2s)
    ----------------------- */
+    const abc = gsap.timeline();
+    abc.to("#js-timeline-1 .box-1", { x: 150, duration: 1 });
+    abc.to("#js-timeline-1 .box-1", { rotation: 180, duration: 1 });
+
     /* -----------------------
     Exercice 2
    -----------------------
